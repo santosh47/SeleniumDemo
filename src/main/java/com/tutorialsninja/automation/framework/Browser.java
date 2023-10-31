@@ -12,13 +12,17 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import com.tutorialsninja.automation.base.Base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class Browser {
 	public static Logger log = Logger.getLogger(Browser.class);
 
-	public static WebDriver startBrowser() {
+	public static WebDriver startBrowser() throws MalformedURLException {
 		String browser = Base.reader.getBrowser().toLowerCase();
 		log.info("Selected Browser is: "+browser);
 		switch (browser) {
@@ -35,9 +39,10 @@ public class Browser {
 			log.info("Internet Explorer Browser is Started" + Base.driver.hashCode());
 			return Base.driver;
 
-		case "opera":
-			WebDriverManager.operadriver().setup();
-			//Base.driver = new OperaDriver();
+		case "remote":
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setBrowserName("chrome"); // Use "firefox" for Firefox
+			WebDriver driver = new RemoteWebDriver(new URL("http://192.168.43.128:54321"),capabilities);
 			log.info("Opera Browser is Started" + Base.driver.hashCode());
 			return Base.driver;
 

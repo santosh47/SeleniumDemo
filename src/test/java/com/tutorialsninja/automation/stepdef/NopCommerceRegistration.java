@@ -1,14 +1,10 @@
 package com.tutorialsninja.automation.stepdef;
 
-import com.tutorialsninja.automation.base.Base;
 import com.tutorialsninja.automation.framework.Elements;
-import com.tutorialsninja.automation.pages.NopCommerce.NopCommerceRegisterPge;
+import com.tutorialsninja.automation.pagesobjects.NopCommerce.NopCommerceRegisterPge;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
-
-import java.util.stream.BaseStream;
 
 public class NopCommerceRegistration {
     NopCommerceRegisterPge nopCommerceRegisterPge=new NopCommerceRegisterPge();

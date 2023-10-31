@@ -1,16 +1,12 @@
 package com.tutorialsninja.automation.stepdef;
 
-import com.tutorialsninja.automation.base.Base;
 import com.tutorialsninja.automation.framework.Elements;
 import com.tutorialsninja.automation.framework.Waits;
-import com.tutorialsninja.automation.pages.LoginPage;
-import com.tutorialsninja.automation.pages.RegisterPage;
-import io.cucumber.datatable.DataTable;
+import com.tutorialsninja.automation.pagesobjects.LoginPage;
+import com.tutorialsninja.automation.pagesobjects.RegisterPage;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
 
 import java.time.Duration;

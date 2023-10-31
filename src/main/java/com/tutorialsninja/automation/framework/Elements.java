@@ -1,5 +1,4 @@
 package com.tutorialsninja.automation.framework;
-import com.tutorialsninja.automation.pages.RegisterPage;
 import java.util.List;
 import java.util.Random;
 

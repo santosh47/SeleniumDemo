@@ -2,14 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="My Suite">
 
+
     <listeners>
         <listener class-name="com.tutorialsninja.automation.framework.RetryRunTime"/>
+    </listeners>
+
+    <listeners>
+        <listener class-name="com.tutorialsninja.automation.util.ListenerClass"/>
     </listeners>
 
     <test name="Test1">
 
         <classes>
-            <class name="com.tutorialsninja.automation.base.BaseTestNg" />
+            <class name="com.tutorialsninja.automation.stepdef.TestPageStep" />
         </classes>
     </test> <!-- Test -->
 

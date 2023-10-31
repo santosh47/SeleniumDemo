@@ -1,16 +1,10 @@
 package com.tutorialsninja.automation.stepdef;
 
-import com.tutorialsninja.automation.framework.Browser;
-import com.tutorialsninja.automation.framework.Elements;
-import com.tutorialsninja.automation.pages.LoginPage;
-import com.tutorialsninja.automation.pages.RegisterPage;
+import com.tutorialsninja.automation.pagesobjects.LoginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-import static com.tutorialsninja.automation.pages.RegisterPage.email;
-import static com.tutorialsninja.automation.pages.RegisterPage.password;
 
 public class order {
 LoginPage loginPage=new LoginPage();

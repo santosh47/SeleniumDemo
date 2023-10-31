@@ -1,5 +1,7 @@
 package com.tutorialsninja.automation.stepdef;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -11,12 +13,15 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
+import java.net.MalformedURLException;
+
 public class Hooks {
     private static Logger log = Logger.getLogger(Hooks.class);
 
     @Before
-    public void setUp(Scenario scenario) {
+    public void setUp(Scenario scenario) throws MalformedURLException {
         PropertyConfigurator.configure(PathHelper.getResourcePath("/src/main/resources/ConfigurationFile/log4j.properties"));
+
         log.info("Scenario Started: " + scenario.getName());
         Base.reader = new PropertyFileReader();
         Browser.startBrowser();
@@ -25,9 +30,11 @@ public class Hooks {
 
     @After
     public void closeBrowser(Scenario scenario) {
-        if (scenario.isFailed()) {
-            //scenario.embed(Browser.takeScreenshot(), "image/png");
-        }
+//        if (scenario.isFailed()) {
+//            //scenario.embed(Browser.takeScreenshot(), "image/png");
+        //scenario.attach(Browser.takeScreenshot(), scenario.getName(),"image/png");
+//        }
+      //  scenario.attach(Browser.takeScreenshot(), scenario.getName(), "image/png");
         log.info("Scenario Completed: " + scenario.getName());
         log.info("Scenario Status is: " + scenario.getStatus());
         Base.driver.quit();

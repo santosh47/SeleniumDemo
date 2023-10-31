@@ -2,12 +2,10 @@ package com.tutorialsninja.automation.stepdef;
 
 import com.tutorialsninja.automation.base.Base;
 import com.tutorialsninja.automation.framework.Elements;
-import com.tutorialsninja.automation.pages.RegisterPage;
+import com.tutorialsninja.automation.pagesobjects.RegisterPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.testng.Assert;
-
-import java.util.Map;
 
 public class Registration {
 

@@ -1,18 +1,14 @@
 package com.tutorialsninja.automation.stepdef;
 
 import com.tutorialsninja.automation.base.Base;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.HashMap;
 import java.util.Map;
 
-import static com.tutorialsninja.automation.Project1.Form.getRandomElement;
+import static com.tutorialsninja.automation.test.Project1.Form.getRandomElement;
 
 public class Bdd {
 

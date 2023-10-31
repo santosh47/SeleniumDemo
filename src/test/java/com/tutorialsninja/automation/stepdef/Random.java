@@ -8,9 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
-
-import static com.tutorialsninja.automation.Project1.Form.getRandomElement;
+import static com.tutorialsninja.automation.test.Project1.Form.getRandomElement;
 
 public class Random {
     WebDriver driver;

@@ -1,5 +1,7 @@
 package com.tutorialsninja.automation.base;
 
+import com.tutorialsninja.automation.util.ExtentManager;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 
 import com.tutorialsninja.automation.config.ConfigurationReader;
@@ -14,6 +16,9 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.testng.annotations.Parameters;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 public class Base {
 	
 	public static Logger log=Logger.getLogger(Base.class);
@@ -27,7 +32,9 @@ public class Base {
 
 	@Parameters("browser")
 	@Before
-	public void setUp(Scenario scenario){
+	public void setUp(Scenario scenario) throws IOException {
+		ExtentManager.setExtent();
+		DOMConfigurator.configure("log4j.xml");
 		log.info("Scenario Started: "+scenario.getName());
 		PropertyConfigurator.configure(
 
@@ -45,7 +52,8 @@ public class Base {
 		log.info("Scenario Completed: "+scenario.getName());
 		log.info("Scenario Status is: "+scenario.getStatus());
 		Base.driver.quit();
-		}
+		ExtentManager.endReport();
+	}
 
 	}
 

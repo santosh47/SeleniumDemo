@@ -1,7 +1,7 @@
 package com.tutorialsninja.automation.stepdef;
 
 import com.tutorialsninja.automation.base.Base;
-import com.tutorialsninja.automation.pages.AddressBookPage;
+import com.tutorialsninja.automation.pagesobjects.AddressBookPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.WebElement;
