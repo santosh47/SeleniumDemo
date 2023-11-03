@@ -6,28 +6,16 @@ import org.testng.annotations.*;
 
 public class Test {
    public static WebDriver driver;
-
-
    //@Parameters("browser")
     @BeforeTest
     public void setUp(){
-
-
-
            driver=new ChromeDriver();
        }
-
-
-
-
     @AfterTest
     public void tearDown()
     {
         driver.close();
     }
-
-
-//
 //    @Test(retryAnalyzer = Retry.class)
 //    public void test()
 //    {
