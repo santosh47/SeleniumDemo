@@ -23,7 +23,6 @@ public class EndToEndTest extends BaseClass {
     @Test
     public void endToEndTest() throws Throwable {
         indexPage = new IndexPage();
-        indexPage = new IndexPage();
         searchResultPage = indexPage.searchProduct("t-shirt");
         addToCartPage = searchResultPage.clickOnProduct();
         addToCartPage.enterQuantity("2");
