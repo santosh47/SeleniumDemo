@@ -13,6 +13,9 @@ public class HomePage {
     @FindBy(xpath = " //span[text()='Order history and details']")
     private WebElement orderHistory;
 
+    @FindBy(xpath = "//ul//li//a[@title='Women']")
+    private WebElement woman;
+
     public HomePage(){
         PageFactory.initElements(driver,this);
     }
@@ -21,5 +24,9 @@ public class HomePage {
     }
    public String getCurrentUrl(){
         return driver.getCurrentUrl();
+    }
+    public WomanSectionPage selectWomanSection (){
+        Action.click(driver,woman);
+        return new WomanSectionPage();
     }
 }
